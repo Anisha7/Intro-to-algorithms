@@ -62,3 +62,15 @@ At each step, the recursive call is half the size of the original. At each step,
     This is the same as a height of logn
 
 A total cost then is 1*logn, since each step costs 1 and there are logn steps. Thus, the running time of binary search is O(logn)
+
+## 6. Observe that the while loop of lines 5–7 of the INSERTION-SORT procedure in Section 2.1 uses a linear search to scan (backward) through the sorted subarray A[1..j-1]. Can we use a binary search (see Exercise 2.3-5) instead to improve the overall worst-case running time of insertion sort to O(nlogn)?
+
+If the subarray is sorted, then yes we can use binary search to improve the overall worst-case running time.
+
+## 7. Describe a O(nlogn)-time algorithm that, given a set S of n integers and another integer x, determines whether or not there exist two elements in S whose sum is exactly x.
+
+Sort the algorithm using merge sort
+Conduct a binary search, adding up the first element and the midpoint and comparing it with x. If it is greater, reduce the scope (midpoint). If it is smaller, increase the scope. Move to the next element if not found. 
+
+
+
